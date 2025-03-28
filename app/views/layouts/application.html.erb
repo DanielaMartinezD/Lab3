@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Y</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application", defer: true %>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container">
+      <a class="navbar-brand" href="/">Y</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <%= yield %>
+  </div>
+
+  <footer class="bg-secondary text-light text-center py-3 mt-4 fixed-bottom">
+    <p class="text">© 2025 Y. All Rights Reserved.</p>
+    <p class="text">
+      <a href="https://www.facebook.com/" class="text-light mx-2">Facebook</a>
+      <a href="https://x.com/" class="text-light mx-2">Twitter</a>
+      <a href="https://www.instagram.com/" class="text-light mx-2">Instagram</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="fw-bold">Be in Contact</h1>
+  <p class="lead">It would be nice to keep in contact with you.</p>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card p-4 shadow">
+      <%= form_with url: "/contact", method: :post, local: true do %>
+        <div class="mb-3">
+          <%= label_tag :name, "Name" %>
+          <%= text_field_tag :name, nil, class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-3">
+          <%= label_tag :email, "Email" %>
+          <%= email_field_tag :email, nil, class: "form-control", required: true %>
+        </div>
+
+        <div class="mb-3">
+          <%= label_tag :message, "Message" %>
+          <%= text_area_tag :message, nil, class: "form-control", required: true %>
+        </div>
+
+        <div class="d-grid">
+          <%= submit_tag "Send Message", class: "btn btn-info" %>
+        </div>
+      <% end %>
+
+      <% if flash[:notice] %>
+        <div class="alert alert-success mt-3"><%= flash[:notice] %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
